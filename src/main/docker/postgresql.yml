@@ -1,0 +1,12 @@
+version: '2'
+services:
+    websocketdemo-postgresql:
+        container_name: websocketdemo-postgresql
+        image: postgres:9.5.1
+        # volumes:
+        #     - ~/volumes/jhipster/websocketdemo/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=websocketdemo
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
