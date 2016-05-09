@@ -11,8 +11,6 @@
     function LongProcessNotificationService($window, $q, localStorageService) {
         var stompClient = null;
         var connected = $q.defer();
-        var alreadyConnectedOnce = false;
-
 
         var loc = $window.location;
         var url = loc.protocol + '//' + loc.host + loc.pathname + 'websocket/longprocess/instance';
@@ -32,9 +30,6 @@
         };
         stompClient.connect(headers, function() {
             connected.resolve('success');
-            if (!alreadyConnectedOnce) {
-                alreadyConnectedOnce = true;
-            }
         });
 
 
