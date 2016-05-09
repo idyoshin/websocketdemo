@@ -77,6 +77,10 @@
         <sonar.sources>${project.basedir}/src/main/</sonar.sources>
         <sonar.surefire.reportsPath>${project.testresult.directory}/surefire-reports</sonar.surefire.reportsPath>
         <sonar.tests>${project.basedir}/src/test/</sonar.tests>
+
+
+        <projectreactor.version>2.0.7.RELEASE</projectreactor.version>
+
     </properties>
 
     <dependencies>
@@ -398,6 +402,13 @@
             <artifactId>spring-security-messaging</artifactId>
             <version>${spring-security.version}</version>
         </dependency>
+        <!-- reactor bus -->
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-bus</artifactId>
+            <version>${projectreactor.version}</version>
+        </dependency>
+
         <!-- reporting -->
         <dependency>
             <groupId>fr.ippon.spark.metrics</groupId>
